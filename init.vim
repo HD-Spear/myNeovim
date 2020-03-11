@@ -122,7 +122,7 @@ func! CompileRunGcc()
 		set splitbelow
 		exec "!g++ -std=c++11 % -Wall -o %<"
 		:sp
-		:res -5
+		:res -15
 		:term ./%<
 	elseif &filetype == 'java'
 		exec "!javac %"
@@ -166,8 +166,8 @@ Plug 'arzg/vim-colors-xcode'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Snippets
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Undo Tree
 Plug 'mbbill/undotree'
@@ -189,13 +189,13 @@ let g:NERDSpaceDelims=0
 " === Colors themes
 " ===
 colorscheme xcodedark
-let g:SnazzyTransparent = 1
+"let g:SnazzyTransparent = 1
 "colorscheme snazzy
 
 " ===
 " === Undotree
 " ===
-noremap tt :UndotreeToggle<CR>
+noremap T :UndotreeToggle<CR>
 let g:undotree_DiffAutoOpen = 1
 let g:undotree_SetFocusWhenToggle = 1
 let g:undotree_ShortIndicators = 1
@@ -208,4 +208,5 @@ function g:Undotree_CustomMap()
 	nmap <buffer> I 5<plug>UndotreeNextState
 	nmap <buffer> K 5<plug>UndotreePreviousState
 endfunc
+
 
