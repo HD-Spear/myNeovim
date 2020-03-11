@@ -122,7 +122,7 @@ func! CompileRunGcc()
 		set splitbelow
 		exec "!g++ -std=c++11 % -Wall -o %<"
 		:sp
-		:res -15
+		:res -5
 		:term ./%<
 	elseif &filetype == 'java'
 		exec "!javac %"
@@ -174,6 +174,7 @@ Plug 'mbbill/undotree'
 
 " Other Plug
 Plug 'scrooloose/nerdcommenter'
+Plug 'jiangmiao/auto-pairs'
 
 
 call plug#end()
