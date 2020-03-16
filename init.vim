@@ -25,7 +25,7 @@ set cursorline
 set ts=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set autoindent
 set mouse-=a
 set list
@@ -69,6 +69,9 @@ vnoremap <LEADER>tt :s/    /\t/g
 " Folding
 noremap <silent> <LEADER>o za
 
+imap <C-c> <Left>
+imap <C-l> <Right>
+
 noremap j h
 noremap h p
 noremap H P
@@ -86,7 +89,8 @@ noremap J 7h
 noremap O 7l
 
 
-noremap = nz
+noremap = nzz
+noremap - Nzz
 
 map <C-o> $
 map <C-j> 0
@@ -119,8 +123,11 @@ noremap <down> :res -5<CR>
 noremap <left> :vertical resize-5<CR>
 noremap <right> :vertical resize+5<CR>
 
-noremap tm :terminal<CR>
-noremap tn :set splitright<CR>:vsplit<CR>:terminal<CR>
+noremap tx :terminal<CR>
+noremap tz :set splitright<CR>:vsplit<CR>:terminal<CR>
+vnoremap hs ~/scripts/
+vnoremap hc ~/C++/
+vnoremap hp ~/Python/
 
 noremap <LEADER>v :set spell!<CR>
 
